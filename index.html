@@ -9,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Ubuntu+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Inter&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
-        font-family: 'Ubuntu Mono', monospace;
+        font-family: 'Inter', sans-serif;
+        background-color: #f5f3ec;
       }
       .header__title {
         font-family: 'Grape Nuts', cursive;
@@ -27,243 +28,259 @@
         transition-duration: 300ms;
       }
       .link:hover {
-        background-color: rgb(236, 72, 153);
+        background-color: #ffe071;
         cursor: pointer;
+      }
+      .hero,
+      .about {
+        background-color: #fffbec;
       }
     </style>
 
     <title>Dominika Pierre Louis</title>
   </head>
 
-  <body class="flex justify-center">
+  <body class="lg:flex lg:justify-center">
     <main class="portfolio lg:w-[1440px]">
       <header
-        class="header border border-black h-[80px] flex items-center px-10"
+        class="header flex items-center justify-center text-3xl py-4 lg:px-10 lg:justify-start lg:text-4xl"
       >
-        <div class="header__title w-[400px] h-12 flex items-center text-4xl">
-          <h1>Dominika Pierre Louis</h1>
-        </div>
+        <h1 class="header__title">Dominika Pierre Louis</h1>
       </header>
 
-      <section class="hero border border-black h-[700px] flex px-10">
+      <section class="hero lg:flex lg:p-10">
         <div
-          class="hero__container-left w-1/2 flex flex-col justify-center gap-36"
+          class="hero__container-left lg:flex lg:flex-col lg:justify-center lg:gap-36 lg:w-1/2"
         >
           <div
-            class="hero__main-text w-[70%] h-60 flex flex-col justify-between text-5xl"
+            class="hero__main-text flex flex-col items-center text-3xl gap-2 py-4 lg:py-0 lg:w-[70%] lg:items-start lg:justify-between lg:gap-4 lg:text-5xl"
           >
             <h2>Design</h2>
             <h2>Out of comfort zone</h2>
             <h2>New challenges</h2>
           </div>
-          <div class="hero__sub-text w-[90%] h-12 text-2xl flex items-center">
+          <div
+            class="hero__sub-text hidden lg:flex lg:items-center lg:justify-start lg:w-[90%] lg:text-2xl"
+          >
             <h3>I see design as a problem-solving activity.</h3>
           </div>
         </div>
         <div
-          class="hero__container-right w-1/2 flex flex-col justify-center items-end"
+          class="hero__container-right flex flex-col justify-center p-4 lg:p-0 lg:items-end lg:w-1/2"
         >
-          <div>
-            <img class="hero__image" src="assets/portrait.svg" alt="Portrait" />
-          </div>
+          <img
+            class="hero__image lg:object-cover"
+            src="assets/portrait.svg"
+            alt="Portrait"
+          />
+        </div>
+        <div
+          class="hero__sub-text flex items-center justify-center text-2xl text-center p-4 lg:hidden"
+        >
+          <h3>I see design as a problem-solving activity.</h3>
         </div>
       </section>
 
       <section
-        class="work border border-black h-[1600px] flex flex-col justify-center gap-10 px-10"
+        class="work px-4 lg:px-0 lg:flex lg:flex-col lg:justify-center lg:gap-10 lg:p-10"
       >
-        <div class="work__top-grid grid gap-10">
-          <div
-            class="work__title flex items-center justify-center h-12 text-5xl"
-          >
-            <h3>Work</h3>
-          </div>
-          <div
-            class="work__wizjonersi border border-black w-full flex flex-col h-96"
-          >
-            <img
-              class="work__wizjonersi-image border border-black object-cover h-4/5"
-              src="assets/wizjonersi.svg"
-              alt="Wizjonersi"
-            />
+        <div
+          class="work__title flex items-center justify-center text-3xl py-4 lg:text-5xl"
+        >
+          <h3>Projects</h3>
+        </div>
+        <div
+          class="work__wizjonersi mb-4 w-full flex flex-col gap-2 lg:gap-0 lg:mb-0 lg:h-96"
+        >
+          <img
+            class="work__wizjonersi-image h-[240px] object-cover rounded-md lg:rounded-none lg:h-4/5"
+            src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="Wizjonersi"
+          />
 
-            <div class="work__wizjonersi-subgroup flex h-1/5">
-              <div class="work__wizjonersi-subgroup__left w-1/2">
-                <div class="border border-black h-full px-4 flex items-center">
-                  <div>
-                    <h4 class="text-2xl">Wizjonersi</h4>
-                    <p class="text-lg text-gray-500">Website design</p>
-                  </div>
+          <div class="work__wizjonersi-subgroup lg:flex lg:h-1/5">
+            <div
+              class="work__wizjonersi-subgroup__left border border-gray-300 lg:w-1/2"
+            >
+              <div class="h-full p-4 flex items-center">
+                <div>
+                  <h4 class="text-2xl">Wizjonersi</h4>
+                  <p class="text-lg text-gray-500">Website design</p>
                 </div>
               </div>
-              <div class="work__wizjonersi-subgroup_right flex w-1/2">
-                <div
-                  class="link border border-black w-full grid place-items-center"
-                >
-                  <a
-                    href="http://wizjonersi.pl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Visit site</a
-                  >
-                </div>
-                <div
-                  class="link border border-black w-full grid place-items-center"
-                >
-                  <a
-                    href="http://wizjonersi.pl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Case study</a
-                  >
-                </div>
-              </div>
+            </div>
+            <div class="work__wizjonersi-subgroup_right lg:flex lg:w-1/2">
+              <a
+                class="link underline underline-offset-4 border border-gray-300 w-full text-lg grid place-items-center py-4 lg:py-0"
+                href="http://wizjonersi.pl"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Visit site</a
+              >
+
+              <a
+                class="link underline underline-offset-4 border border-gray-300 w-full text-lg grid place-items-center py-4 lg:py-0"
+                href="https://www.figma.com/proto/Q1e6RLQiPEpQpvtuIxfOH9/portfolio?page-id=2%3A310&node-id=18%3A8785&viewport=397%2C48%2C0.23&scaling=min-zoom"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Case study</a
+              >
             </div>
           </div>
         </div>
 
-        <div class="work__bottom-grid grid grid-cols-2 gap-10">
-          <div class="work__keo border border-black h-96">
+        <div class="work__bottom-grid gap-4 grid lg:grid-cols-2 lg:gap-10">
+          <div
+            class="work__keo mb-4 w-full flex flex-col gap-2 lg:gap-0 lg:mb-0 lg:h-96"
+          >
             <img
-              class="work__keo-image border border-black object-cover w-full h-4/5"
-              src="assets/keo.svg"
-              alt="Keo"
+              class="work__keo-image h-[240px] object-cover rounded-md lg:rounded-none lg:h-4/5"
+              src="https://images.unsplash.com/photo-1525546961789-d03d3236ae55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+              alt="keo"
             />
-            <div class="work__keo-subgroup flex h-1/5">
-              <div class="work__keo-subgroup__left w-1/2">
-                <div class="border border-black h-full px-4 flex items-center">
+
+            <div class="work__keo-subgroup lg:flex lg:h-1/5">
+              <div
+                class="work__keo-subgroup__left border border-gray-300 lg:w-1/2"
+              >
+                <div class="h-full p-4 flex items-center">
                   <div>
                     <h4 class="text-2xl">Keo</h4>
                     <p class="text-lg text-gray-500">E-commerce</p>
                   </div>
                 </div>
               </div>
-              <div class="work__keo-subgroup_right flex w-1/2">
-                <div
-                  class="link border border-black w-full grid place-items-center"
+              <div class="work__keo-subgroup_right lg:flex lg:w-1/2">
+                <a
+                  class="link border underline underline-offset-4 border-gray-300 w-full text-lg grid place-items-center py-4 lg:py-0"
+                  href="https://www.figma.com/proto/Q1e6RLQiPEpQpvtuIxfOH9/portfolio?page-id=3%3A6365&node-id=18%3A6719&viewport=397%2C48%2C0.19&scaling=min-zoom&starting-point-node-id=18%3A6719"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Case study</a
                 >
-                  <a
-                    href="http://wizjonersi.pl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Case study</a
-                  >
-                </div>
               </div>
             </div>
           </div>
-          <div class="work__biuro border border-black h-96">
+
+          <div
+            class="work__biuro mb-4 w-full flex flex-col gap-2 lg:gap-0 lg:mb-0 lg:h-96"
+          >
             <img
-              class="work__biuro-image border border-black object-cover w-full h-4/5"
-              src="assets/biuro.svg"
-              alt="Biuro"
+              class="work__biuro-image h-[240px] object-cover rounded-md lg:rounded-none lg:h-4/5"
+              src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+              alt="biuro"
             />
-            <div class="work__biuro-subgroup flex h-1/5">
-              <div class="work__biuro-subgroup__left w-1/2">
-                <div class="border border-black h-full px-4 flex items-center">
+
+            <div class="work__biuro-subgroup lg:flex lg:h-1/5">
+              <div
+                class="work__biuro-subgroup__left border border-gray-300 lg:w-1/2"
+              >
+                <div class="h-full p-4 flex items-center">
                   <div>
                     <h4 class="text-2xl">Biuro tłumaczeń</h4>
                     <p class="text-lg text-gray-500">Website redesign</p>
                   </div>
                 </div>
               </div>
-              <div class="work__biuro-subgroup_right flex w-1/2">
-                <div
-                  class="link border border-black w-full grid place-items-center"
+              <div class="work__biuro-subgroup_right lg:flex lg:w-1/2">
+                <a
+                  class="link w-full underline underline-offset-4 border border-gray-300 text-lg grid place-items-center py-4 lg:py-0"
+                  href="http://biuro.pl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Case study</a
                 >
-                  <a
-                    href="http://wizjonersi.pl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Case study</a
-                  >
-                </div>
               </div>
             </div>
           </div>
-          <div class="work__infographic border border-black h-96">
+
+          <div
+            class="work__infographic mb-4 w-full flex flex-col gap-2 lg:gap-0 lg:mb-0 lg:h-96"
+          >
             <img
-              class="work__infographic-image border border-black object-cover w-full h-4/5"
-              src="assets/infographic.svg"
-              alt="Infographic"
+              class="work__infographic-image h-[240px] rounded-md object-cover lg:rounded-none lg:h-4/5"
+              src="https://images.unsplash.com/photo-1590005354167-6da97870c757?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=881&q=80"
+              alt="infographic"
             />
-            <div class="work__infographic-subgroup flex h-1/5">
-              <div class="work__infographic-subgroup__left w-1/2">
-                <div class="border border-black h-full px-4 flex items-center">
+
+            <div class="work__infographic-subgroup lg:flex lg:h-1/5">
+              <div
+                class="work__infographic-subgroup__left border border-gray-300 lg:w-1/2"
+              >
+                <div class="h-full p-4 flex items-center">
                   <div>
                     <h4 class="text-2xl">Styl życia</h4>
                     <p class="text-lg text-gray-500">Infographic design</p>
                   </div>
                 </div>
               </div>
-              <div class="work__infographic-subgroup_right flex w-1/2">
-                <div
-                  class="link border border-black w-full grid place-items-center"
+              <div class="work__infographic-subgroup_right lg:flex lg:w-1/2">
+                <a
+                  class="link w-full underline underline-offset-4 border border-gray-300 text-lg grid place-items-center py-4 lg:py-0"
+                  href="https://www.figma.com/proto/Q1e6RLQiPEpQpvtuIxfOH9/portfolio?page-id=2%3A312&node-id=2%3A314&viewport=397%2C48%2C0.86&scaling=min-zoom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project</a
                 >
-                  <a
-                    href="http://wizjonersi.pl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >View project</a
-                  >
-                </div>
               </div>
             </div>
           </div>
-          <div class="work__collage border border-black h-96">
+
+          <div
+            class="work__collage mb-4 w-full flex flex-col gap-2 lg:gap-0 lg:mb-0 lg:h-96"
+          >
             <img
-              class="work__collage-image border border-black object-cover w-full h-4/5"
-              src="assets/collage.svg"
-              alt="Collage"
+              class="work__collage-image rounded-md h-[240px] object-cover lg:rounded-none lg:object-[0rem_-14rem] lg:h-4/5"
+              src="https://images.unsplash.com/photo-1533122250115-6bb28e9a48c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+              alt="collage"
             />
-            <div class="work__collage-subgroup flex h-1/5">
-              <div class="work__collage-subgroup__left w-1/2">
-                <div class="border border-black h-full px-4 flex items-center">
+
+            <div class="work__collage-subgroup lg:flex lg:h-1/5">
+              <div
+                class="work__collage-subgroup__left border border-gray-300 lg:w-1/2"
+              >
+                <div class="h-full p-4 flex items-center">
                   <div>
                     <h4 class="text-2xl">Collage</h4>
                     <p class="text-lg text-gray-500">Personal project</p>
                   </div>
                 </div>
               </div>
-              <div class="work__collage-subgroup_right flex w-1/2">
-                <div
-                  class="link border border-black w-full grid place-items-center"
+              <div class="work__collage-subgroup_right lg:flex lg:w-1/2">
+                <a
+                  class="link underline underline-offset-4 border border-gray-300 w-full text-lg grid place-items-center py-4 lg:py-0"
+                  href="https://www.figma.com/proto/Q1e6RLQiPEpQpvtuIxfOH9/portfolio?page-id=2%3A313&node-id=134%3A3530&viewport=397%2C48%2C0.24&scaling=min-zoom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View project</a
                 >
-                  <a
-                    href="http://wizjonersi.pl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >View project</a
-                  >
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section
-        class="about border border-black flex flex-col gap-5 px-10 py-20"
-      >
+      <section class="about flex flex-col gap-5 px-4 text-justify lg:p-10">
         <div
-          class="about__title flex items-center justify-center h-12 text-5xl"
+          class="about__title text-3xl py-4 flex items-center justify-center lg:text-5xl"
         >
           <h3>About</h3>
         </div>
         <div class="about__container-1">
-          <h4 class="text-2xl">UI/UX</h4>
+          <h4 class="text-xl lg:text-2xl text-gray-500">UI/UX</h4>
           <p class="text-lg">
             I am a motivated and enthusiastic person who has a passion for
             designing great products that makes people's lifes easier.
             Discovering the world of design was a game changer and became a
             great passion of mine.
           </p>
+          <br />
           <p class="text-lg">
             I am looking forward to undertake new projects and challenges and to
             learn new skills from more experienced collegues.
           </p>
         </div>
         <div class="about__container-2">
-          <h4 class="text-2xl">Learning</h4>
+          <h4 class="text-xl lg:text-2xl text-gray-500">Learning</h4>
           <p class="text-lg">
             Working across various fields in Europe and Australia, I have
             discovered that learning never stops. I am adaptable and have a
@@ -272,7 +289,9 @@
           </p>
         </div>
         <div class="about__container-3">
-          <h4 class="text-2xl">How hobbies make me a better designer</h4>
+          <h4 class="text-xl lg:text-2xl text-gray-500">
+            How hobbies make me a better designer
+          </h4>
           <p class="text-lg">
             Enjoying craft work, creativity, visiting museums and reading,
             watching independent movies, travelling - it all opens my eyes to
@@ -280,7 +299,9 @@
           </p>
         </div>
         <div class="about__container-4">
-          <h4 class="text-2xl">Things that put a smile on my face</h4>
+          <h4 class="text-xl lg:text-2xl text-gray-500">
+            Things that put a smile on my face
+          </h4>
           <p class="text-lg">
             Music, nature, hiking, good movie, friends, chocolate muffins.
           </p>
@@ -288,32 +309,25 @@
       </section>
 
       <section
-        class="contact border border-black flex flex-col gap-5 px-10 py-20 relative"
+        class="contact flex flex-col items-center gap-5 p-4 lg:p-10 lg:relative"
       >
-        <div
-          class="contact__title flex items-center justify-center h-12 text-5xl"
-        >
-          <h3>Contact</h3>
-        </div>
-        <div
-          class="contact__email flex items-center justify-center h-12 text-3xl"
-        >
-          <h5>dominika.pierrelouis@gmail.com</h5>
-        </div>
-        <div
-          class="contact__phone flex items-center justify-center h-12 text-3xl"
-        >
-          <h5>+48 572 598 533</h5>
-        </div>
-
         <img
-          class="contact__image absolute h-4/5"
+          class="contact__image w-4/5 lg:w-auto lg:absolute lg:left-0 lg:h-full"
           src="assets/contact-image.svg"
           alt="Contact"
         />
+        <div class="contact__title text-3xl lg:text-5xl">
+          <h3>Contact</h3>
+        </div>
+        <div class="contact__email text-2xl lg:text-3xl">
+          <h5>dominika.pierrelouis@gmail.com</h5>
+        </div>
+        <div class="contact__phone text-2xl lg:text-3xl">
+          <h5>+48 572 598 533</h5>
+        </div>
       </section>
-      <footer class="footer border border-black flex flex-col text-center py-4">
-        <p>© 2022 Dominika Pierre Louis | Coded by me</p>
+      <footer class="footer flex items-center justify-center py-4">
+        <p>© 2022 Dominika Pierre Louis</p>
       </footer>
     </main>
   </body>
